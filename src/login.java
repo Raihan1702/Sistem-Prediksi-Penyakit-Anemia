@@ -153,8 +153,55 @@ public class login extends javax.swing.JFrame {
             rs = stat.executeQuery(sql);
             if(rs.next()){
                 if(txt_name.getText().equals(rs.getString("username")) && txt_pass.getText().equals(rs.getString("password"))){
-                    JOptionPane.showMessageDialog(null, "berhasil login");
-                    new nono().setVisible(true);
+                    String side1 = (JOptionPane.showInputDialog("Siapa nama kamu?"));
+                    String side2 = (JOptionPane.showInputDialog("kamu sering merasa cepat lemas? ( y / t )"));
+                    String side3 = (JOptionPane.showInputDialog("kamu sering merasa cepat lelah? ( y / t )"));
+                    String side4 = (JOptionPane.showInputDialog("kamu sering merasa sakit kepala? ( y / t )"));
+                    String side5 = (JOptionPane.showInputDialog("kamu sering merasa cepat pusing? ( y / t )"));
+                    String side6 = (JOptionPane.showInputDialog("kamu sering merasa cepat ngantuk? ( y / t )"));
+                    String side7 = (JOptionPane.showInputDialog("apa kulit kamu terlihat kekuningan? ( y / t )"));
+                    String side8 = (JOptionPane.showInputDialog("apa nafas kamu pendek? ( y / t )"));
+
+                    if ( side2.contains("y") && side3.contains("y") && side4.contains("y") && side5.contains("y") && side6.contains("y") && side7.contains("y") && side7.contains("y")){
+                        String nama = side1;
+                        JOptionPane.showMessageDialog(null,"hai, kamu beresiko besar terkena anemia. segera konsultasikan ke dokter ya,  "+nama);
+                    } else if ( side2.contains("y") && side3.contains("t") && side4.contains("y") && side5.contains("y") && side6.contains("y") && side7.contains("y") && side8.contains("y")){
+                        String nama = side1;
+                        JOptionPane.showMessageDialog(null, "hai, kamu beresiko besar terkena anemia. segera konsultasikan ke dokter ya,"+nama);
+                    } else if ( side2.contains("y") && side3.contains("t") && side4.contains("y") && side5.contains("y") && side6.contains("t") && side7.contains("y") && side8.contains("y")){
+                        String nama = side1;
+                        JOptionPane.showMessageDialog(null, "hai, kamu beresiko besar terkena anemia. segera konsultasikan ke dokter ya,"+nama);
+                    } else if ( side2.contains("y") && side3.contains("t") && side4.contains("y") && side5.contains("y") && side6.contains("t") && side7.contains("y") && side8.contains("t")){
+                        String nama = side1;
+                        JOptionPane.showMessageDialog(null, "hai, kamu beresiko besar terkena anemia. segera konsultasikan ke dokter ya,"+nama);
+                    } else if ( side2.contains("y") && side3.contains("t") && side4.contains("y") && side5.contains("y") && side6.contains("y") && side7.contains("t") && side8.contains("t")){
+                        String nama = side1;
+                        JOptionPane.showMessageDialog(null, "hai, kamu beresiko kecil terkena anemia. kalau gejalanya memburuk segera konsultasikan ke dokter ya,"+nama);
+                    } else if ( side2.contains("y") && side3.contains("y") && side4.contains("y") && side5.contains("t") && side6.contains("y") && side7.contains("t") && side8.contains("t")){
+                        String nama = side1;
+                        JOptionPane.showMessageDialog(null, "kamu beresiko anemia,"+nama);
+                    } else if ( side2.contains("t") && side3.contains("y") && side4.contains("y") && side5.contains("y") && side6.contains("y") && side7.contains("t") && side8.contains("t")){
+                        String nama = side1;
+                        JOptionPane.showMessageDialog(null, "kamu beresiko anemia,"+nama);
+                    } else if ( side2.contains("y") && side3.contains("y") && side4.contains("y") && side5.contains("y") && side6.contains("t") && side7.contains("t") && side8.contains("t")){
+                        String nama = side1;
+                        JOptionPane.showMessageDialog(null, "hai, kamu beresiko kecil terkena anemia. kalau gejalanya memburuk segera konsultasikan ke dokter ya,"+nama);
+                    } else if ( side2.contains("t") && side3.contains("t") && side4.contains("y") && side5.contains("y") && side6.contains("y") && side7.contains("t") && side8.contains("t")){
+                        String nama = side1;
+                        JOptionPane.showMessageDialog(null, "hai, kamu beresiko kecil terkena anemia. kalau gejalanya memburuk segera konsultasikan ke dokter ya,"+nama);
+                    } else if ( side2.contains("t") && side3.contains("y") && side4.contains("y") && side5.contains("t") && side6.contains("y") && side7.contains("t") && side8.contains("t")){
+                        String nama = side1;
+                        JOptionPane.showMessageDialog(null, "kamu beresiko anemia, "+nama);
+                    } else if ( side2.contains("y") && side3.contains("t") && side4.contains("y") && side5.contains("t") && side6.contains("y") && side7.contains("t") && side8.contains("t")){
+                        String nama = side1;
+                        JOptionPane.showMessageDialog(null, "kamu beresiko anemia, "+nama);
+                    } else if ( side2.contains("y") && side3.contains("y") && side4.contains("t") && side5.contains("t") && side6.contains("y") && side7.contains("t") && side8.contains("t")){
+                        String nama = side1;
+                        JOptionPane.showMessageDialog(null, "kamu beresiko anemia, "+nama);
+                    } else{
+                        String nama = side1;
+                        JOptionPane.showMessageDialog(null, "kamu beresiko anemia, "+nama);
+                    }
                 }
             }else{
                     JOptionPane.showMessageDialog(null, "username atau password salah");

@@ -18,6 +18,7 @@ public class nono extends javax.swing.JFrame {
      */
     public nono() {
         initComponents();
+        this.setVisible(true);
     }
 
     /**
